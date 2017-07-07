@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+
+<script src="js/jquery.min.js"></script>
+<script  src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/Plantilla.css">
+ <link rel="stylesheet" type="text/css" href="css/estiloP.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+ <style type="text/css">
+
+   .linea{
+    position: absolute;
+   
+    left: 21.5%;
+    top: -70%;
+  
+   }
+ </style>
+ 
+</head>
+<body onload="inicio()" onresize="ajustar()" class="noseleccionable" >
+
+  <audio  src="sonido/sonidoF.mp3" id="sonido"></audio>
+  <img src="imagenes/fondo2.png" id="fondo">
+  <div id="consigna" class="noseleccionable">Seleccionar la respuesta correcta.</div>
+  <div id="pregunta" class="noseleccionable"  >Desde un punto A se envía un proyectil dirigido hacia el punto P. Calcula la velocidad inicial en m/s para que el proyectil caiga en el punto B. G = 10 m/s<span  class="superindice">2</span></div>
+
+ <div id="cuadroImagen">
+  <img src="imagenes/imagen1.png" style=" position:absolute; width:90%; height:90%; left:5%; top: 5%;">
+ </div> 
+
+ 
+ <div  class="botones" style="top:14%;"> 
+  <div  id="p1" class="circulo"> </div>
+  <div id="p2" class="circulo"> </div>
+  <div  id="p3" class="circulo"> </div>
+  <div  id="p4" class="circulo"> </div>
+  </div> 
+
+
+  <div class="contenido noseleccionable" style="top:18%;" >
+    <div  class="opciones" > <strong>V<span class="subindice">0</span> = </strong>  <div class="linea">__</div> (25/&radic;32) m/s</div>
+    <div  class="opciones" ><strong>V<span class="subindice">0</span> = </strong> <div class="linea" style="left:19%;" >_</div>(5/&radic;3) m/s</div>
+    <div  class="opciones" > <strong>V<span class="subindice">0</span> = </strong> <div class="linea" style="left:19%;">__</div> (2/&radic;32) m/s</div>
+    <div  class="opciones" ><strong>V<span class="subindice">0</span> = </strong> <div class="linea" style="left:23%;">__</div> (-25/&radic;32) m/s</div>
+   
+    
+  
+    <div   id="panelBien" style="width:37%;"></div>
+    <div   id="panelMal" style="width:37%;"></div>
+  </div> 
+ 
+  <a href="cinco.html" alt="4"><img src="imagenes/flecha.png" id="flecha"></a>
+   <a href="tres.html" alt="4"><img src="imagenes/flechaAtras.png" id="flechaAtras"></a>
+
+  <div id="capa"></div>
+  <script type="text/javascript" src="js/OZGFunciones.js"></script>
+  
+</body>
+</html>

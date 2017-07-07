@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+ 
+<head>
+ <link href="css/bootstrap.min.css" rel="stylesheet">        
+   
+	 <!-- Main Css  -->
+    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/responsive.css">
+    <link href="images/favicon.png" rel="shortcut icon">
+ 
+    <script src="plugin/alert/js/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="plugin/alert/css/sweetalert.css">
+     <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="js/sweetalert-dev.js"></script>
+    <link rel="stylesheet" href="css/sweetalert.css">    
+    <script type="text/javascript" src="plugin/book.txt"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+
+</head>
+
+<body onload="inicio()">
+ <header id="header">
+ <div class="cabeza" align="justify">
+	<div class="container padd1"><i class="demo-icon icon-location">&#xe800;</i>Av. Cordecruz #45, Santa Cruz - Bolivia</div>
+
+</div>
+ <div class="site-brand">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="logo" class="logo">
+                            <a href="" rel="home">
+                                <img src="images/logo.png" alt="image" class="img-responsive">
+                            </a>
+                        </div><!-- /.logo -->
+                        <div class="header-widgets">
+                            <div id="text-1" class="widget widget_text">            
+                                <div class="textwidget">
+                                    <div class="info-icon">
+                                        <i class="demo-icon icon-phone tam30 colorlila">&#xe801;</i>
+                                        <div class="content"><span class="bold">LLÁMENOS</span>
+                                        <br>
+                                        <span>(00591) 3 349 2646  </span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="text-2" class="widget widget_text" style="border-right:none">            
+                                <div class="textwidget">
+                                    <div class="info-icon">
+                                        <i class="demo-icon icon-envelope-open tam25 colorlila">&#xf2b6;</i>
+                                        <div class="content"> <span class="bold">E-MAIL</span>
+                                        <br>
+                                        <span>plataforma@bienaventuranza.org</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--<div id="text-3" class="widget widget_text">            
+                                <div class="textwidget">
+                                    <div class="info-icon">
+                                        <a href="#modal-text1" class="button content-reveal">REGÍSTRESE</a>
+                                    </div>
+                                </div>
+                            </div>-->
+                        </div><!-- /.header-widget -->
+                    </div><!-- /.col-md-12 -->
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </div><!-- /.site-brand -->
+    
+ </header> 
+
+       <!--rv-slider-->
+
+<script type="text/javascript" src="js/jquery.js"></script>
+ 
+	<style>
+	* {margin: 0;padding: 0;font-family:sans-serif;border:0;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-ms-box-sizing: border-box;box-sizing: border-box;}
+	body {text-align:center;}
+	fieldset p {width:33.3%;/*float:left;*/text-align:center;}
+	select{padding:10px;border:1px solid #bbb;border-radius:5px;margin:5px 0;display:block;box-shadow:0 0 10px #ddd;width:100%}
+	input {padding:10px 50px;margin:0 auto;}
+	#resultados{margin:20px 0;padding:20px;border:10px solid #ddd;}
+	</style>
+ <!--  We offer Different Services -->
+
+  <section class="diff-offer-wrapper">
+  <br>
+  <div class="container bgplomo">
+    <div class="row ">
+      	<div class="col-sm-12 fomul" align="center"><br><br>
+        	<div class="tam30 fam_oswaldbold">VERIFICACIÓN</div>
+            <div class="sep1"></div><br>
+            <p align="center">Llene los campos para seguir con la verificación</p>
+			
+            <br>
+           
+            
+         
+<!-- <form  class="combobox">-->
+	<fieldset>
+    	<table class="tabla_isbn">
+        	<tr>
+            	<td>Código ISBN:</td>
+    			<td><input type="text" name="isbn" class="txt1" id="codigoisbn" required ></td>
+            </tr>
+           <!-- <tr>
+            	<td>Código del libro:</td>
+    			<td> <input type="text" name="correo" class="txt1" id="codigoCliente"    required></td>
+            </tr>  -->
+
+        </table>
+        <br><br>
+        <input type="submit" name="submit" class="btn_enviar" value="ENVIAR" id="enviar">
+        <input type="hidden" value="" name="idsession">
+	</fieldset>
+
+<!-- </form>-->
+
+<br><br>
+        </div>
+       
+      </div>  
+    </div>
+      </section> 
+      
+      
+ <!--  We offer Different Services  --> 
+ 
+
+<div class="pie" align="center">
+	<div class="container padd1">FUNDACIÓN CASA EDITORIAL BIENAVENTURANZAS AV. CORDECRUZ #45 - SANTA CRUZ - BOLIVIA @ DERECHOS RESERVADOS</div>
+</div>    
+</body> 
+
+
+ <script type="text/javascript">
+ 
+ function inicio(){
+     
+    //$("#codigoCliente").val(""+codigoBook+"");
+ if(!navigator.onLine){
+    swal("Error...", "Error de conexión", "error");
+        return;
+    }
+    
+    
+ }
+ </script>  
+
+</html>

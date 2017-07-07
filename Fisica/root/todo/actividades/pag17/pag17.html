@@ -1,0 +1,760 @@
+<!doctype html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/plantilla.css">
+ <style type="text/css">
+
+  #panel{
+ position: absolute;
+ left: 0%;
+ top: 0%;
+ width: 100%;
+ height: 100%;
+  border-radius: 2% 2% 2% 2%;
+ -moz-border-radius: 2% 2% 2% 2%;
+-webkit-border-radius: 2% 2% 2% 2%;
+z-index: 4;
+border: 0px solid #000000;
+background-color: #0066cc;
+ 
+ }
+
+
+ input{
+   
+ 	width: 6%;
+ 	height: 6%;  
+ 	 background-color: #fff;
+   color: #000;
+    text-align: center;
+    text-transform: uppercase;
+   font-weight: bold;
+ }
+
+
+ input:focus{
+
+  width: 6.2%;
+  height: 6.2%;  
+   background-color: #fff;
+   color: #000;
+    text-align: center;
+    text-transform: uppercase;
+   font-weight: bold;
+   z-index: 8;
+   border: 2px solid #7B31EB;
+
+}
+
+input:hover{
+  cursor: pointer;
+}
+
+#contenido{
+position: absolute;
+left: 5%;
+top: 22%;
+width: 75%;
+height:75%; 
+z-index: 4;
+ /*border:  2px solid #000;*/
+}
+ 
+ 
+ .cajas1{
+ z-index: 5;
+ position: absolute;
+
+   }
+
+.cajas2{
+  z-index: 5;
+ position: absolute;
+   }
+
+
+.cajas4{
+  z-index: 5;
+ position: absolute;
+   }
+
+
+.cajas5{
+  z-index: 5;
+ position: absolute;
+   }
+
+
+.cajas2{
+  z-index: 5;
+ position: absolute;
+   }
+
+ .cajas3{
+  z-index: 5;
+ position: absolute;
+   }
+
+#pre{
+position: absolute;
+left: 0%;
+top: 0%;
+width: 100%;
+height: 100%;
+z-index: 4;
+}
+
+.numeracion{
+  position: absolute;
+  z-index: 2;
+  left: 0%;
+  top: 0%;
+  width: 10%;
+  height: 10%;
+  font-weight: bold;
+}
+
+
+
+.palabraBien{
+  /*border: 2px solid #0C5D10; */
+  background-color: #0066CC;
+
+
+}
+
+.contenidoPreguntas{
+      position:  absolute;
+    width: 100%;
+    height: 100%;
+   color: #fff;
+    text-align: justify;
+}
+
+
+#ordenes{
+position: absolute;
+
+ left: 0%;
+ top: 17%;
+ width: 40%;
+ height: 80%;
+
+z-index: 5;
+  
+ }
+
+
+.preguntas{
+ position: relative;
+ z-index: 4;
+ text-align: justify;
+ width: 85%;
+ height: 20%;
+ left: 0%;
+ top: 6%;
+ padding-top: 0%;
+color: #fff;
+ /*padding-top: 3%;*/
+ 
+ }
+
+ #flecha{
+  position: absolute;
+  left: 89%;
+  top: 87%;
+  width: 6%;
+  height: 9%;
+  z-index: 7;
+  visibility: hidden;
+} 
+
+#flechaI{
+  position: absolute;
+  z-index: 6;
+  width: 5%;
+  height: 30%;
+  left: 40%;
+  top: 39%;
+  z-index: 6;
+  cursor: pointer;
+}
+
+.puntero{
+position: absolute;
+z-index: 6;
+width: 2%;
+height: 2%;
+}
+
+ </style>
+
+</head>
+<body onload="inicio()" onresize="ajustar()" class="noseleccionable">
+
+	<img src="imagenes/fondo.png" id="fondo">
+    <div id="consigna">Lee detenidamente los diferentes enunciados sobre elementos de un vector y resuelve el crucigrama.</div>   
+  
+     <img src="imagenes/flechaI.png" id="flechaI"> 
+    <div id="ordenes">
+  <div id="panel"> </div>
+    <div class="preguntas" style="top:8%; height:18%;" >1.- <div class="contenidoPreguntas" style=" position: absolute; left:8%; top:0%;" >Lugar desde donde comienza el vector.</div></div>
+    <div class="preguntas"  style="top:0%;">2.- <div class="contenidoPreguntas" style=" position: absolute; left:8%;  top:0%;" >Elemento que indica hacia dónde se dirige el vector, llamándose también punto de llegada.</div></div>
+    <div class="preguntas" style="top:0%;">3.- <div class="contenidoPreguntas" style="position:absolute; left:8%; top:0%;" >Flecha o segmento de recta orientada con la que es posible representar la magnitud vectorial mediante una gráfica.</div></div>
+    <div class="preguntas" style="top:6%;">4.- <div class="contenidoPreguntas" style="position:absolute; left:8%; top:0%;" >Es la recta del vector y se la define mediante el ángulo medido en sentido anti horario desde la recta de referencia. </div> </div>
+    <div class="preguntas" style="top:10%; height:10%;">5- <div class="contenidoPreguntas" style="position:absolute; left:8%; top:0%;" >Es el valor de la magnitud vectorial, también llamado tamaño o norma.</div></div>
+    </div>
+ 
+
+
+    <div id="contenido">
+
+    <div  id="pre"> 
+      <input  class="cajas1"  id="a1" maxLength="1" onkeypress="solotexto(this)" > 
+      <input  class="cajas1"  id="a2" maxLength="1" onkeypress="solotexto(this)" > 
+      <input  class="cajas1" id="a3" maxLength="1" onkeypress="solotexto(this)"  >  
+      <input  class="cajas1" id="a4" maxLength="1" onkeypress="solotexto(this)"  >  
+      <input  class="cajas1" id="a5" maxLength="1" onkeypress="solotexto(this)"  >  
+      <input  style="background-color:#000; position: absolute; left:38%; top:18%;"  maxLength="1" >  
+      <input  class="cajas1" id="a6" maxLength="1" onkeypress="solotexto(this)"  >  
+      <input  class="cajas1" id="a7" maxLength="1" onkeypress="solotexto(this)" >
+      <input  class="cajas1" id="a8" maxLength="1" onkeypress="solotexto(this)" >
+      <input  class="cajas1" id="a9" maxLength="1" onkeypress="solotexto(this)" >
+      <input  class="cajas1" id="a10" maxLength="1" onkeypress="solotexto(this)" >
+      <input  class="cajas1" id="a11" maxLength="1" onkeypress="solotexto(this)" >
+ 
+  
+
+        <input  class="cajas2" id="b1" maxLength="1" style="left:17%; top:2%;"  onkeypress="solotexto(this)" > 
+
+        <input  class="cajas2" id="b2" maxLength="1" style="left:17%; top:10%;" onkeypress="solotexto(this)" > 
+        <input               maxLength="1" style="position:absolute;left:17%; top:18%; z-index:6;"  disabled="true"  value="N"> 
+        <input  class="cajas2" id="b3" maxLength="1" style="left:17%; top:26%;" onkeypress="solotexto(this)"> 
+        <input  class="cajas2" id="b4" maxLength="1" style="left:17%; top:34%;"onkeypress="solotexto(this)"> 
+        <input  class="cajas2" id="b5" maxLength="1" style="left:17%; top:42%;"onkeypress="solotexto(this)"> 
+        <input  class="cajas2" id="b6" maxLength="1" style="left:17%; top:50%;"onkeypress="solotexto(this)">  
+     
+
+ 
+       <input  class="cajas3"  id="c1" maxLength="1"  style="left:31%; top:50%;"  onkeypress="solotexto(this)" > 
+       <input  class="cajas3"  id="c2" maxLength="1" style="left:31%; top:42%;"  onkeypress="solotexto(this)" >     
+      <input  class="cajas3"  id="c3" maxLength="1" style="left:31%; top:34%;" onkeypress="solotexto(this)" >    
+      <input  class="cajas3"  id="c4" maxLength="1" style="left:31%; top:26%;"  onkeypress="solotexto(this)" >  
+      <input  class="cajas3"  id="c5" maxLength="1" style="left:31%; top:10%;"  onkeypress="solotexto(this)" >  
+      <input        disabled="true"              style="position:absolute; left:31%; top:18%; z-index:6;"  maxLength="1"   value="O">     
+        
+    
+       
+         
+  
+
+      
+ 
+     <input  class="cajas4"  id="d1" maxLength="1"  style="left:66%; top:10%;"onkeypress="solotexto(this)" >    
+     <input    disabled="true" style="position:absolute; z-index:6; left:66%; top:18%;"  maxLength="1"  value="I" >    
+     <input  class="cajas4"  id="d2" maxLength="1"  style="left:66%; top:26%;"onkeypress="solotexto(this)" >    
+     <input  class="cajas4"  id="d3" maxLength="1"  style="left:66%; top:34%;"onkeypress="solotexto(this)" >    
+     <input  class="cajas4"  id="d4" maxLength="1"  style="left:66%; top:42%;" onkeypress="solotexto(this)" >    
+     <input  class="cajas4"  id="d5" maxLength="1" style="left:66%; top:50%;" onkeypress="solotexto(this)" >    
+     <input  class="cajas4"  id="d6" maxLength="1" style="left:66%; top:58%;"onkeypress="solotexto(this)" >    
+     <input  class="cajas4"  id="d7" maxLength="1" style="left:66%; top:66%;" onkeypress="solotexto(this)" >    
+     <input  class="cajas4"  id="d8" maxLength="1" style="left:66%; top:74%;" onkeypress="solotexto(this)" >    
+ 
+ 
+     <input  class="cajas5"  id="e1" maxLength="1" style="left:101%; top:10%;"onkeypress="solotexto(this)" >    
+     <input             style=" position:absolute; z-index:6; left:101%; top:18%;" maxLength="1"  disabled="true" value="Ó">    
+     <input  class="cajas5"  id="e2" style="left:101%; top:26%;" maxLength="1" onkeypress="solotexto(this)" >    
+     <input  class="cajas5"  id="e3" style="left:101%; top:34%;" maxLength="1" onkeypress="solotexto(this)" >    
+     <input  class="cajas5"  id="e4" style="left:101%; top:42%;" maxLength="1" onkeypress="solotexto(this)" >    
+     <input  class="cajas5"  id="e5" style="left:101%; top:50%;"maxLength="1" onkeypress="solotexto(this)" > 
+
+ 
+     </div>  
+     
+
+ 
+  <div id="txt1" class="numeracion">1</div>
+  <div id="txt2" class="numeracion">2</div>
+  <div id="txt3" class="numeracion">3</div>
+  <div id="txt4" class="numeracion">4</div>
+  <div id="txt5" class="numeracion">5</div>
+  <img src="imagenes/f2.png"  class="puntero" id="im1">
+  <img src="imagenes/f2.png" class="puntero" id="im2">
+  <img src="imagenes/f2.png"  class="puntero" id="im3">
+  <img src="imagenes/f2.png" class="puntero" id="im4">
+  <img src="imagenes/f2.png" class="puntero" id="im5">
+
+    </div>
+ 
+ 
+
+ <a href="dos.html"><img src="imagenes/flecha.png" id="flecha" ></a> 
+      
+ 
+ <script type="text/javascript">
+
+   var respuestas=new Array();
+   var totalCajas= new Array();
+    totalCajas.push("cajas1");
+    totalCajas.push("cajas2");
+    totalCajas.push("cajas3");
+    totalCajas.push("cajas4");
+    totalCajas.push("cajas5");
+    var audio;
+ 
+  var aciertos=0;
+  var entradas=false;
+  var totalPalabras=5;
+  var elementoAnterior=null;
+  var Pcerrado=true;
+  //var colorBien="#0C5D10";
+  var colorBien="#fff";
+
+  var colorMal="#FF6600";
+
+   function inicio(){
+   	ajustar();
+   // sonidoFondo();
+   setTimeout(function(){
+     efecto();
+       var vcajas1=document.getElementsByClassName("cajas1");
+   vcajas1[0].focus();  
+  
+   },1000);
+   }
+
+   function efecto(){
+     $("#ordenes").animate({width:"toggle"});
+    $("#flechaI").animate({left:"0%"});
+
+    $("#flechaI").attr("src","imagenes/flechaD.png");
+    Pcerrado=false;
+   }
+
+function asignarEventos(ar){
+   for(var i=0; i<ar.length; i++ ){
+      $("#"+ar[i].id).on("click",cambiarfoco);
+      $("#"+ar[i].id).on("touchstart",cambiarfoco);
+   }
+}
+function  cambiarfoco(e){
+ // alert("*"+e.target.id+"*");
+ //document.getElementById(e.target.id).value="";  
+$("#"+e.target.id).val("") // $("#"+e.target.id).val("");
+ $("#"+e.target.id).focus();
+}
+
+   function ajustar(){
+
+        var alto=$(window).height();
+  var ancho=$(window).width();
+     ancho=(ancho+alto)/2;
+   var tamanio= ancho/45;
+   
+   
+var vpreg= document.getElementsByClassName("preguntas");
+$("#consigna").css("fontSize",""+tamanio*0.85+"pt");
+  
+  $(".numeracion").css("fontSize",""+tamanio*0.85+"pt");
+  
+//ponerVertical($(".cajas2"),15,4);
+//ponerVertical($(".cajas3"),26,10);
+//ponerVertical($(".cajas4"),56,10);
+//ponerVertical($(".cajas5"),86,10);  
+//invertirPosiciones("cajas3");
+//ponerHorizontal($(".cajas1"),3,16);
+
+ 
+  var vcajas1=document.getElementsByClassName("cajas1");
+   vcajas1[0].focus();  
+  
+  colocarCajas1();
+  colocarnumeracion();
+  establecerRespuestas(respuestas);
+  
+   for( var t=0; t<vpreg.length; t++){
+ vpreg[t].style.fontSize=""+tamanio*0.9+"pt";
+ vpreg[t].style.left="5%";
+   }
+  var  vc1= document.getElementsByClassName("cajas1");
+  var  vc2= document.getElementsByClassName("cajas2");
+  var  vc3= document.getElementsByClassName("cajas3");
+  var  vc4= document.getElementsByClassName("cajas4");
+  var  vc5= document.getElementsByClassName("cajas5");
+
+ asignarEventos(vc1);
+ asignarEventos(vc2);
+ asignarEventos(vc3);
+ asignarEventos(vc4);
+ asignarEventos(vc5);
+
+
+   }
+
+   function colocarCajas1(){
+     colocarelemento("a1",3,18);
+     colocarelemento("a2",10,18);
+     //blanco             17
+     colocarelemento("a3",24,18);
+   // blanco              31
+   //nrego                38
+     colocarelemento("a4",45,18);
+     colocarelemento("a5",52,18);
+     colocarelemento("a6",59,18);
+       // blanco          66
+      colocarelemento("a7",73,18);
+     colocarelemento("a8",80,18);
+     colocarelemento("a9",87,18);
+     colocarelemento("a10",94,18);
+     //blanco 101
+     colocarelemento("a11",108,18);
+
+
+   }
+
+   function colocarelemento(id,posL,posT){
+     $("#"+id+"").css("left",""+posL+"%");
+     $("#"+id+"").css("top",""+posT+"%");
+
+   }
+
+$("#flechaI").on("click",function(){
+ 
+  if(Pcerrado){
+   
+    $("#ordenes").animate({width:"toggle"});
+    $("#flechaI").animate({left:"0%"});
+
+    $(this).attr("src","imagenes/flechaD.png");
+    Pcerrado=false;
+   }else{
+   $(this).attr("src","imagenes/flechaI.png");
+    $("#ordenes").animate({width:"toggle"});
+    $("#flechaI").animate({left:"40%"});
+ 
+  Pcerrado=true;
+   }
+
+})
+
+function siguienteElemento(ele){
+ var vclase= document.getElementsByClassName($(ele).attr("class"));
+
+ var pos=-1;
+ for(var i=0; i<vclase.length && (pos==-1); i++){
+   
+          if(ele==vclase[i]){
+             pos=i;
+          }
+  }
+  if(pos==(vclase.length-1)){
+    return null;
+  }
+ //console.log("MM *"+$("#"+vclase[pos+1].id)+"*");
+  return $("#"+vclase[pos+1].id);
+ //return vclase[pos+1].id;
+}
+
+
+
+
+function establecerRespuestas(ar){
+ ar.push("PUTAPLCACIN");
+ ar.push("SETIDO");
+ ar.push("VECTR");
+ ar.push("DRECCIÓN");
+ ar.push("MDULO");
+
+}
+
+
+function colocarnumeracion(){
+ $("#txt1").css("position","absolute");
+ $("#txt1").css("left","-0.2%");
+ $("#txt1").css("top","17%"); 
+
+  $("#im1").css("top","23%"); 
+  $("#im1").css("left","-0.2%"); 
+
+  $("#txt2").css("position","absolute");
+ $("#txt2").css("left","18%");
+ $("#txt2").css("top","-4%");
+
+ $("#im2").css("top","-2%"); 
+  $("#im2").css("left","20%"); 
+  $("#im2").css("transform","rotate(90deg)");
+
+
+ $("#txt3").css("position","absolute");
+ $("#txt3").css("left","31%");
+ $("#txt3").css("top","59%");
+
+  $("#im3").css("top","60%"); 
+  $("#im3").css("left","33%"); 
+  $("#im3").css("transform","rotate(-90deg)");
+
+ $("#txt4").css("position","absolute");
+ $("#txt4").css("left","66%");
+ $("#txt4").css("top","4%");
+
+ $("#im4").css("left","68%");
+ $("#im4").css("top","5%");
+   $("#im4").css("transform","rotate(90deg)");
+
+  $("#txt5").css("position","absolute");
+ $("#txt5").css("left","102%");
+ $("#txt5").css("top","4%");
+
+ $("#im5").css("left","104%");
+ $("#im5").css("top","5%");
+   $("#im5").css("transform","rotate(90deg)");
+
+
+
+
+}
+
+
+
+
+
+function ponerHorizontal(ar,posL,posT){
+  var k=posL;
+    for( var i=0; i<ar.length; i++){
+          ar[i].style.left=""+k+"%";
+          ar[i].style.top=""+posT+"%";
+          k+=6;
+    }
+}
+
+   function ponerVertical(ar,posL,posT){
+   var k=posT;
+    for( var i=0; i<ar.length; i++){
+          ar[i].style.left=""+posL+"%";
+          ar[i].style.top=""+k+"%";
+          k+=6;
+    }
+
+   }
+
+
+  function invertirPosiciones(ar){
+   var vclaseAux=document.getElementsByClassName(ar);
+     var aux=0;
+   for(var i=0; i<(vclaseAux.length/2); i++){
+            var ultimL=vclaseAux[vclaseAux.length-1-i].style.left;
+            var ultimT=vclaseAux[vclaseAux.length-1-i].style.top;
+            vclaseAux[(vclaseAux.length-1-i)].style.left=vclaseAux[i].style.left;
+            vclaseAux[(vclaseAux.length-1-i)].style.top=vclaseAux[i].style.top;
+            vclaseAux[i].style.left=ultimL;
+            vclaseAux[i].style.top=ultimT;
+  
+   }
+
+
+}
+
+ 
+function solotexto(ob) {
+  console.log(event.keyCode);
+  var ingreso=false;
+ if ((event.keyCode != 32) && (event.keyCode < 65) || (event.keyCode > 90) && (event.keyCode < 97) || (event.keyCode > 122)){ // 
+  //ingreso numeros y otros caracteres
+  ingreso=true;
+
+ }
+  
+  if(ingreso){
+    console.log("ingreso");
+      event.returnValue = false;
+      return;
+  }
+//$(ob).attr("value",String.fromCharCode(event.keyCode).toUpperCase());
+var claseLetra=$(ob).attr("class");
+var letra=String.fromCharCode(event.keyCode).toUpperCase();
+console.log(claseLetra+" : "+letra);
+ if(esta(claseLetra,"cajas4") && (letra=="O")){
+letra="Ó";
+console.log("pasoo Ó");
+ } 
+
+  //$(ob).val(""+String.fromCharCode(event.keyCode).toUpperCase());
+$(ob).val(""+letra);
+  
+ 
+
+evaluar(ob);
+var ele=siguienteElemento(ob);
+     if(ele!=null){
+ if( ele.val().length>0){
+   //console.log("contueenejhagdjkgga > "+ele.attr("id"));
+   $("#"+ele.attr("id")).val("");
+
+   }
+    ele.focus(); 
+     }else{
+      entradas=true;
+    var cla=getSiguienteArreglo(ob);
+       cla[0].focus();
+    // $("#"+cla[0].id).val("");
+  //   elementoAnterior=$("#"+cla[0].id+"").clone();
+     }
+
+return false;
+}
+
+
+function evaluar(ob){
+     if(esUltimaCajaDeLaPalabra(ob)){
+        if(verificarPalabraCorrecta(ob)){
+            aciertos++;
+            pintarPalabra(ob,colorBien);
+             deshabilitarPalabra(ob);
+            sonidoBien();
+        }else{
+           pintarPalabra(ob,colorMal);
+           sonidoMal();
+        }
+        if(aciertos==totalPalabras){
+          setTimeout(function(){
+             $("#flecha").css("visibility","visible");
+             silenciarSonido();
+          },1000);         
+        }        
+   }
+
+}
+ 
+function esUltimaCajaDeLaPalabra(ob){
+  //  mostrarPalabra(ob);
+  var vclaseAux=  document.getElementsByClassName($(ob).attr("class"));
+ var cc="*";
+  for(var k=0;  k<vclaseAux.length; k++){
+    if( $("#"+vclaseAux[k].id).val()==""){
+    //  console.log($("#"+vclaseAux[k].id).val());
+     return false;
+    }
+    cc=cc+$("#"+vclaseAux[k].id).val();
+  }
+ 
+  return true;
+}
+
+
+function verificarPalabraCorrecta(ob){
+  var vclaseAux=document.getElementsByClassName($(ob).attr("class"));
+     var palabraCompleta=getRespuesta(ob);
+     var caddd="";
+     for(var ti=0; ti<vclaseAux.length; ti++){
+       caddd+=""+$("#"+vclaseAux[ti].id).val();
+
+     }
+
+
+    for(var i=0; i<vclaseAux.length; i++){
+
+         if(   $("#"+vclaseAux[i].id).val().toUpperCase()!=palabraCompleta[i]){
+              return false;
+               }
+        
+    }
+
+ return true;
+}
+
+function pintarPalabra(ob,color){
+var vclaseAux=document.getElementsByClassName($(ob).attr("class"));
+for(var i=0; i<vclaseAux.length; i++){
+      vclaseAux[i].style.color=color;
+}
+
+}
+
+
+function deshabilitarPalabra(ob){
+  var vclaseAux=document.getElementsByClassName($(ob).attr("class"));
+for(var i=0; i<vclaseAux.length; i++){
+        $("#"+vclaseAux[i].id).addClass("palabraBien");
+     $("#"+vclaseAux[i].id).attr("disabled","true");
+     $("#"+vclaseAux[i].id).attr("cursor","default");
+}
+ 
+}
+
+
+
+
+function getRespuesta(ob){
+    var resAux= $(ob).attr("class");
+ //console.log("asswwww "+resAux);
+     for(var i=0; i<totalCajas.length; i++){
+        if(esta(resAux,totalCajas[i])){
+            return respuestas[i];
+        }
+     }
+  console.log("return null getRespuesta");
+     return null;
+}
+ function esta(cad1,cade2){
+ return cad1.indexOf(cade2)!=-1;
+
+ }
+
+
+function getSiguienteArreglo(ob){ // return el siguiente arregleo en base el elemento dado  
+     // $(ob).removeClass("palabraBien");
+     var claseAux= $(ob).attr("class");
+    // console.log("--> "+claseAux);
+     var pos=-1;
+     for(var i=0; i<totalCajas.length && (pos==-1) ; i++){
+         if(esta(claseAux,totalCajas[i])){
+                pos=i;
+         }
+     }
+     
+       if(pos==-1){
+        console.log("no se encontro");
+       }
+
+    if(pos==(totalCajas.length-1))   {
+       pos=0;
+    }else{
+      pos++;
+    } 
+    arreglo=totalCajas[pos];
+    return document.getElementsByClassName(""+arreglo);
+
+  }
+
+function sonidoBien(){
+  var audio=document.createElement("audio");
+  audio.src="./sonido/bien.mp3";
+    audio.play();
+}
+
+function sonidoMal(){
+  /*
+  var audio=document.createElement("audio");
+  audio.src="sonido/mal.wav";
+    audio.play(); */
+}
+ 
+function sonidoFondo(){
+    audio=document.createElement("audio");
+  audio.src="sonido/sonidoF.mp3";
+    audio.play();
+}
+function silenciarSonido(){
+   audio.pause();
+}
+
+ </script>
+
+
+</body>
+</html>

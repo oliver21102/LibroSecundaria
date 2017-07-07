@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+       <title>Bienaventuranza.org</title>
+       
+       
+        <meta name="description" content="Pushy is an off-canvas navigation menu for your website.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		
+        
+         <link rel="stylesheet" href="Fisica/root/new/css/layout.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="Fisica/root/new/css/menu.css" type="text/css" media="screen">
+        
+        
+		<link rel="icon" type="image/png" href="Fisica/root/img/logo.png" />
+
+        <link rel="stylesheet" href="Fisica/root/menu1/css/normalize.css">
+        <link rel="stylesheet" href="Fisica/root/menu1/css/demo.css">
+        <!-- Pushy CSS -->
+        <link rel="stylesheet" href="Fisica/root/menu1/css/pushy.css">
+                <script type="text/javascript" src="activacion/activador.txt"></script>
+            <script src="Fisica/update/js/sweetalert-dev.js"></script>
+            <script src="Fisica/update/plugin/plugin.txt"></script>        
+    <link rel="stylesheet" href="Fisica/update/css/sweetalert.css">
+        
+        <!-- jQuery 
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>-->
+        <script>window.jQuery || document.write('<script src="Fisica/root/menu1/js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+        <!-- Modernizr -->
+    <script src="Fisica/root/menu1/js/vendor/modernizr.custom.71422.js"></script>
+	
+	<script language="JavaScript">
+
+//////////F12 disable code////////////////////////
+    document.onkeypress = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+           //alert('No F-12');
+            return false;
+        }
+    }
+    document.onmousedown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+document.onkeydown = function (event) {
+        event = (event || window.event);
+        if (event.keyCode == 123) {
+            //alert('No F-keys');
+            return false;
+        }
+    }
+	
+	
+/////////////////////end///////////////////////
+
+
+
+
+</script>
+
+  <style type="text/css">
+   
+    html,iframe { margin:0; padding:0px; height:100.2%;  }
+    iframe { display:block; width:102%; border:none;position:absolute }
+	
+	
+	#bg{
+
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:-1;
+	
+
+
+}
+
+.bgwidth{
+
+	width:100%;
+	height:auto;
+
+}
+
+.bgheight{
+
+	height:100%;
+	width:auto;
+
+
+}
+
+
+        #apDiv2 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	left: -13px;
+	
+}
+
+
+
+.img1
+{
+	display: block;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: -3px;
+	right: 10px;
+}
+
+
+.h21
+{
+
+display: block;
+	width: 35%;
+	height: 35%;
+	position: absolute;
+	top: -10px;
+	left: 41%;
+	color:#FFFCFC;
+}
+
+
+#centrado{
+		
+		
+	}
+
+body
+ {
+	
+background-color:#2294CF;
+
+}
+
+#apDiv1 {
+	position:absolute;
+	left:93%;
+	top:4px;
+	width:196px;
+	height:95px;
+	z-index:2;
+}
+  </style>
+
+    </head>
+	
+	
+	 <body onkeydown="return pulsar(event)" > 
+     
+
+ 
+  <a onClick="cerrar(); " href="index.html" >
+<div id="apDiv1"></div>    
+	</a>
+    	  
+     <!-- 188d9e -->
+       <a onClick="destivar(); toggleFullScreen() " href="Fisica/Scripts/swf.html" target="principal1">
+   
+	 <div title="" id="carga" style="cursor:pointer;border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;box-shadow:inset white 0px 0px 14px;background-image:url(Fisica/root/img/top_logo1i.png);background-repeat: no-repeat;background-position:center;background-size:100%;background-color:#2294CF;width:350px;color:#fff;text-align:center;height:100px;padding:52px 12px 12px 12px;position:fixed;top:30%;left:37%;z-index:6;"></div>
+	</a>
+
+	
+        <!-- Pushy Menu -->
+
+        <!-- Menu Button -->
+             <div id="apDiv2">
+      
+      
+     <iframe name="principal1"   scrolling="no" allowfullscreen  ></iframe>
+      
+     </div>
+
+           
+        </div>
+ 
+        <!-- Pushy JS -->
+        <script src="Fisica/root/menu1/js/pushy.min.js"></script>
+		
+		<script type="text/javascript">
+document.oncontextmenu = function(){return false;}
+</script>
+
+    </body>
+    
+
+<script> 
+
+window.onload = function() {
+
+/*cambios*/
+mostrarVerificacion();
+/*cambios*/
+
+	function bgadj(){
+		
+		
+		var element = document.getElementById("bg");
+		
+		var ratio =  element.width / element.height;	
+		
+		if ((window.innerWidth / window.innerHeight) < ratio){
+		
+			element.style.width = 'auto';
+			element.style.height = '101%';
+			  
+			
+			<!-- si la imagen es mas ancha que la ventana la centro -->
+			if (element.width > window.innerWidth){
+			
+				var ajuste = (window.innerWidth - element.width)/2;
+				
+				element.style.left = ajuste+'px';
+			
+			}
+		
+		}
+		else{	
+		
+			element.style.width = '100%';
+			element.style.height = '101%';
+			element.style.left = '0';
+
+		}
+		
+	}
+<!-- llamo a la función bgadj() por primera vez al terminar de cargar la página -->
+	bgadj();
+	<!-- vuelvo a llamar a la función  bgadj() al redimensionar la ventana -->
+	window.onresize = function() { 
+		bgadj();
+
+	}
+
+}
+/*cambios*/
+function mostrarVerificacion(){
+	 try{	
+if(codigoLibro!=codigoL){
+       window.location="Fisica/update/validacion.html";
+	 }
+	 }catch(errorInfo){
+ window.location="Fisica/update/validacion.html";
+	 }
+
+}
+
+/*cambios*/
+
+
+function toggleFullScreen() {
+    if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+       (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {  
+      document.documentElement.requestFullScreen();  
+    } else if (document.documentElement.mozRequestFullScreen) {  
+	
+      document.documentElement.mozRequestFullScreen();  
+	  
+    } else if (document.documentElement.webkitRequestFullScreen) {  
+	
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+    }  
+  } else {  
+    if (document.cancelFullScreen) {  
+      document.cancelFullScreen();  
+    } else if (document.mozCancelFullScreen) {  
+      document.mozCancelFullScreen();  
+    } else if (document.webkitCancelFullScreen) {  
+      document.webkitCancelFullScreen();  
+    }  
+  }  
+} 
+
+
+function requestFullScreen(el) {
+  // Supports most browsers and their versions.
+  var requestMethod = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullScreen;
+
+  if (requestMethod) { // Native full screen.
+    requestMethod.call(element);
+  } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+    var wscript = new ActiveXObject("WScript.Shell");
+    if (wscript !== null) {
+      wscript.SendKeys("{F11}");
+    }
+  }
+}
+
+
+
+function pulsar(e) { 
+    tecla=(document.all) ? e.keyCode : e.which; 
+    if (tecla==65 && e.altKey) {//78 = letra a 
+        window.open("http://arcasys.net","miventana","width=600,height=400,menubar=no");
+		}
+		
+		 if (tecla==76 && e.altKey) {//78 = letra L 
+        window.open("https://www.facebook.com/lineth.humerez?fref=ts","miventana","width=800,height=600,menubar=no");
+		}
+		
+		 if (tecla==67 && e.altKey) {//78 = letra n 
+        window.open("https://www.facebook.com/josecristian.aguileravargas","miventana","width=800,height=600,menubar=no");
+		}
+
+}
+var elem = document.body; // Make the body go full screen.
+requestFullScreen(elem);
+
+
+
+ function activar(){
+
+	 
+$("#carga").css("display","block");
+$("#carga").css("opacity","1");
+
+setTimeout(destivar,1000);  
+
+
+    }
+
+  function destivar(){
+ $("#carga").animate({"opacity":"0"},0,function(){$("#carga").css("display","none");}); 
+ }
+ 
+
+</script>  
+    
+
+
+</html>

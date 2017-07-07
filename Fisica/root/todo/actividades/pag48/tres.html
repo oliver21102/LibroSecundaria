@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+
+
+   <script src="js/jquery.min.js"></script>
+<script  src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/Plantilla.css">
+ <link rel="stylesheet" type="text/css" href="css/estiloP.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+ 
+ 
+</head>
+<body onload="inicio()" onresize="ajustar()" class="noseleccionable" >
+
+  <audio  src="sonido/sonidoF.mp3" id="sonido"></audio>
+  <img src="imagenes/fondo.png" id="fondo">
+  <div id="consigna" class="noseleccionable">Seleccionar la respuesta correcta.</div>
+  <div id="pregunta" class="noseleccionable" >En un plano inclinado la resistencia es:</div>
+
+  <div  class="botones">
+  <div  id="p1" class="circulo"> </div>
+  <div id="p2" class="circulo"> </div>
+  <div  id="p3" class="circulo"> </div>
+  <div  id="p4" class="circulo"> </div>
+     <div id="circuloVerde" class="blanco"></div>
+   <div id="circuloRojo" class="blanco"></div>
+  </div>
+
+
+  <div class="contenido noseleccionable" >
+    <div  class="opciones" >Igual al peso del objeto.</div>
+    <div   class="opciones" >Opuesta al peso del objeto.</div>
+    <div  class="opciones" >Mayor al peso del objeto.</div>
+    <div  class="opciones" >Menor al peso del objeto.</div>
+   
+    <div   id="panelBien" style=" width:52%;"></div>
+    <div   id="panelMal" style=" width:53%;"></div>
+  </div>
+
+ <div id="capa"></div>
+  <a href="cuatro.html" alt="3"><img src="imagenes/flecha.png" id="flecha"></a>
+  <a href="dos.html" alt="2"><img src="imagenes/flechaAtras.png" id="flechaAtras"></a>
+
+  <script type="text/javascript" src="js/OZGFunciones.js"></script>
+</body>
+</html>

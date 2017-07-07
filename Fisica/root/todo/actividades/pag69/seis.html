@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<title></title>
+
+<script src="js/jquery.min.js"></script>
+<script  src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/Plantilla.css">
+ <link rel="stylesheet" type="text/css" href="css/estiloP.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+ 
+ 
+</head>
+<body onload="inicio()" onresize="ajustar()" class="noseleccionable" >
+
+  <audio  src="sonido/sonidoF.mp3" id="sonido"></audio>
+  <img src="imagenes/fondo2.png" id="fondo">
+  <div id="consigna" class="noseleccionable">Seleccionar la respuesta correcta.</div>
+  <div id="pregunta" class="noseleccionable"  style="width:87%;">Calcula la altura de la cual debe caer el agua de una presa para chocar con la rueda de una turbina a 30 m/s. Usar g = 10 m/s²
+</div>
+ 
+   
+
+ <div  class="botones">
+  <div  id="p1" class="circulo"> </div>
+  <div id="p2" class="circulo"> </div>
+  <div  id="p3" class="circulo"> </div>
+  <div  id="p4" class="circulo"> </div>
+  </div> 
+
+
+  <div class="contenido noseleccionable" >
+    <div  class="opciones" > <strong style="padding-left:5%;">Δh</strong> = 45 m</div>
+    <div  class="opciones" > <strong style="padding-left:5%;">Δh</strong> = 5 m</div>
+    <div  class="opciones" > <strong style="padding-left:5%;">Δh</strong> = -45 m</div>
+    <div  class="opciones" > <strong style="padding-left:5%;">Δh</strong> = 145 m</div>
+  
+    
+
+ 
+   
+    <div   id="panelBien" style="width:33%;"></div>
+    <div   id="panelMal" style="width:33%;"></div>
+  </div> 
+
+  <img src="imagenes/intentalo.png"  id="intentalo">  
+
+
+  <a href="seis.html" alt="6"><img src="imagenes/flecha.png" id="flecha"></a>
+   <a href="cuatro.html" alt="6"><img src="imagenes/flechaAtras.png" id="flechaAtras"></a>
+   <div id="capa"></div>
+  <script type="text/javascript" src="js/OZGFunciones.js"></script>
+  
+  
+</body>
+</html>

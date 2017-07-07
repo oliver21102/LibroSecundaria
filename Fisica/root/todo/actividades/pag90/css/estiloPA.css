@@ -1,0 +1,181 @@
+
+   .circulo{
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+     border-radius: 50%;
+     z-index: 3;
+     width: 18%;
+     height: 8%;
+     background-color: #fff;
+     color:#fff;
+     background: #fff; 
+     position: absolute;
+     cursor: pointer;
+      box-sizing: border-box; 
+ transition: all 500ms ease;
+box-shadow: inset 0 0 0 3px #2a6e7a;
+   }
+ 
+   .circulo:hover{
+    background: #2a6e7a ;
+ box-shadow: inset 0 0 0 3px #ffffff;
+   }
+
+   .circuloNoHover{
+     background-color: #fff !important;
+     background: #fff !important; 
+ box-shadow: inset 0 0 0 3px #2a6e7a !important;
+   }
+ 
+   .botones{
+   	position: absolute;
+   	width: 20%;
+   	height: 75%;
+    
+   	left: 0%;
+   	top: 20%;
+   	z-index: 2;
+   }
+
+   .contenido{
+   	position: absolute;
+   	width: 75%;
+   	height: 75%;
+    left: 13%;
+    top: 24%;
+    z-index: 2;
+    
+
+   }
+ 
+   #pregunta{
+   	position: absolute;
+   left: 3%;
+   top:22%;
+  width: 90%;
+  height: 10% ; 
+  z-index: 3;
+  text-align: justify;
+ 
+   	   }
+   div #pregunta{
+ text-align: justify !important;
+
+   }
+
+
+       .opciones{
+        position: absolute;
+        font-size: 20pt;
+        z-index: 4;
+
+       }
+
+#panelBien{
+
+border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 0px solid #000000;
+background-color: green;
+z-index: 1;
+left: 2%;
+width: 60%;
+height: 15%;
+position: absolute;
+opacity: 0.5;
+visibility: hidden;
+
+}
+#panelMal{
+
+border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+border: 0px solid #000000;
+background-color: red;
+position: absolute;
+width: 60%;
+height: 15%;
+left: 2%;
+z-index: 1;
+opacity: 0.5;
+visibility: hidden;
+}
+
+#flecha{
+  position: absolute;
+  left: 90%;
+  top: 87%;
+  width: 7%;
+  height: 9%;
+  z-index: 7;
+  visibility: hidden;
+}
+
+#consigna{
+ position: absolute;
+ left: 3%;
+ top: 14%;
+ width: 80%;
+ height: 10%;
+ z-index: 2;
+font-weight: bold;
+}
+
+#btnEmpezar{
+width: 100%;
+height: 100%;
+cursor: pointer;
+}
+.botonI{
+position: absolute;
+width: 12%;
+height: 8%;
+left: 85%;
+top: 88%;
+z-index: 6;
+visibility:  hidden;
+cursor: pointer;
+}
+
+
+.textoE{
+ position: absolute;
+ top: 25%;
+ left: 12%;
+ color: #fff;
+ font-weight: bold;
+ text-align: center;
+}
+
+.noseleccionable{
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;  
+}
+
+h1{
+  text-align:  center;
+}
+h2{
+ text-align: center;
+}
+
+#intentalo{
+position: absolute;
+visibility: hidden;
+left: 80%;
+top: 86%;
+width: 18%;
+height: 10.2%;
+cursor: pointer;
+z-index: 6;
+}
+
+
+   .subindice{
+  vertical-align: sub;
+   }

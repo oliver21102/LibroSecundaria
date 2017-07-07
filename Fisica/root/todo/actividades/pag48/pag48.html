@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+   <script src="js/jquery.min.js"></script>
+<script  src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/Plantilla.css">
+ <link rel="stylesheet" type="text/css" href="css/estiloP.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body onload="inicio()" onresize="ajustar()" class="noseleccionable" >
+
+  <audio  src="sonido/sonidoF.mp3" id="sonido"></audio>
+  <img src="imagenes/fondo.png" id="fondo">
+  <div id="consigna" class="noseleccionable">Seleccionar la respuesta correcta.</div>
+  <div id="pregunta" class="noseleccionable"   >La condición de equilibrio de la palanca es:</div>
+
+  <div  class="botones">
+  <div  id="p1" class="circulo"> </div>
+  <div id="p2" class="circulo"> </div>
+  <div  id="p3" class="circulo"> </div>
+  <div  id="p4" class="circulo"> </div>
+ 
+  </div>
+  <div class="contenido noseleccionable" >
+    <div  class="opciones" >F<span  class="subindice">m</span> * b<span  class="subindice">fm</span> = R * b<span  class="subindice">r</span></div>
+    <div   class="opciones">F<span  class="subindice">m</span> + b<span  class="subindice">fm</span> = R + b<span  class="subindice">r</span></div>
+    <div  class="opciones" >F<span  class ="subindice">m</span> * b<span  class="subindice">fm</span> = R - b<span  class="subindice">r</span></div>
+    <div  class="opciones" >F<span  class="subindice">m</span> + b<span  class="subindice">fm</span> = R * b<span  class="subindice">r</span></div>   
+
+    <div   id="panelBien" style=" width:35%;"></div>
+    <div   id="panelMal" style=" width:35%;"></div>
+
+
+  </div>
+
+  <div id="capa"></div>
+  <a href="dos.html" alt="1"><img src="imagenes/flecha.png" id="flecha"></a>
+
+<script type="text/javascript" src="js/OZGFunciones.js"></script>
+</body>
+</html>

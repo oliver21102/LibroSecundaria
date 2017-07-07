@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+   <script src="js/jquery.min.js"></script>
+<script  src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/Plantilla.css">
+ <link rel="stylesheet" type="text/css" href="css/estiloP.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body onload="inicio()" onresize="ajustar()" class="noseleccionable" >
+
+  <audio  src="sonido/sonidoF.mp3" id="sonido"></audio>
+  <img src="imagenes/fondo.png" id="fondo">
+  <div id="consigna" class="noseleccionable">Seleccionar la respuesta correcta.</div>
+  <div id="pregunta" class="noseleccionable"   >Determina el valor de la resultante y dirección del ángulo resultante por el método analítico, de dos fuerzas F<span class="subindice">1</span> y F<span class="subindice">2</span>, cuyos valores son de 15 N y 25 N respectivamente, con ángulos de 45° y 130° cada uno.</div>
+
+  <div  class="botones">
+  <div  id="p1" class="circulo"> </div>
+  <div id="p2" class="circulo"> </div>
+  <div  id="p3" class="circulo"> </div>
+  <div  id="p4" class="circulo"> </div>
+ 
+  </div>
+  <div class="contenido noseleccionable" >
+    
+
+     <div  class="opciones" > F<span  class="subindice">x</span> = 33,4  &nbsp;&nbsp;&nbsp;&nbsp; F<span  class="subindice">y</span>=29,9   
+     &nbsp;&nbsp;&nbsp;&nbsp; F<span class="subindice"> r</span>= 44,83  &nbsp;&nbsp;&nbsp;&nbsp; &alpha; = 41,84 </div>
+     
+     <div  class="opciones" > F<span  class="subindice">x</span> = 13,4  &nbsp;&nbsp;&nbsp;&nbsp; F<span  class="subindice">y</span>=20,9   
+     &nbsp;&nbsp;&nbsp;&nbsp; F<span class="subindice"> r</span>= 44,83  &nbsp;&nbsp;&nbsp;&nbsp; &alpha; = 11,84 </div>
+
+     <div  class="opciones" > F<span  class="subindice">x</span> = 79,4  &nbsp;&nbsp;&nbsp;&nbsp; F<span  class="subindice">y</span>=19,9   
+     &nbsp;&nbsp;&nbsp;&nbsp; F<span class="subindice"> r</span>= 54,83  &nbsp;&nbsp;&nbsp;&nbsp; &alpha; = 51,84 </div>
+
+     <div  class="opciones" > F<span  class="subindice">x</span> = 77,4  &nbsp;&nbsp;&nbsp;&nbsp; F<span  class="subindice">y</span>=44,4   
+     &nbsp;&nbsp;&nbsp;&nbsp; F<span class="subindice"> r</span>= 33,83  &nbsp;&nbsp;&nbsp;&nbsp; &alpha; = 27,84 </div>
+    
+
+
+    <div   id="panelBien" style=" width:90%;"></div>
+    <div   id="panelMal" style=" width:90%;"></div>
+
+  </div>
+
+  <div id="capa"></div>
+  <a href="cuatro.html" alt="3"><img src="imagenes/flecha.png" id="flecha"></a>
+  <a href="dos.html" alt="3"><img src="imagenes/flechaAtras.png" id="flechaAtras"></a>
+
+<script type="text/javascript" src="js/OZGFunciones.js"></script>
+</body>
+</html>

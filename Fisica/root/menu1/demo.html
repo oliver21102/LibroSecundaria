@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Pushy - Off-Canvas Navigation Menu</title>
+        <meta name="description" content="Pushy is an off-canvas navigation menu for your website.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/demo.css">
+        <!-- Pushy CSS -->
+        <link rel="stylesheet" href="css/pushy.css">
+        
+        <!-- jQuery -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+        <!-- Modernizr -->
+    <script src="js/vendor/modernizr.custom.71422.js"></script>
+
+
+  <style type="text/css">
+   
+    html,iframe { margin:0; padding:0px; height:100.2%;  }
+    iframe { display:block; width:102%; border:none; }
+	
+	
+	#bg{
+
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:-1;
+	
+
+
+}
+
+.bgwidth{
+
+	width:100%;
+	height:auto;
+
+}
+
+.bgheight{
+
+	height:100%;
+	width:auto;
+
+
+}
+
+
+        #apDiv2 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	left: -13px;
+}
+
+
+
+.img1
+{
+	display: block;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: -3px;
+	right: 10px;
+}
+
+
+.h21
+{
+	display: block;
+	width: 252px;
+	height: 40px;
+	position: absolute;
+	top: -10px;
+	left: 40%;
+}
+
+  </style>
+
+    </head>
+    <body>
+    
+    <script> 
+
+window.onload = function() {
+
+
+
+	function bgadj(){
+		
+		
+		var element = document.getElementById("bg");
+		
+		var ratio =  element.width / element.height;	
+		
+		if ((window.innerWidth / window.innerHeight) < ratio){
+		
+			element.style.width = 'auto';
+			element.style.height = '101%';
+			
+			<!-- si la imagen es mas ancha que la ventana la centro -->
+			if (element.width > window.innerWidth){
+			
+				var ajuste = (window.innerWidth - element.width)/2;
+				
+				element.style.left = ajuste+'px';
+			
+			}
+		
+		}
+		else{	
+		
+			element.style.width = '100%';
+			element.style.height = '101%';
+			element.style.left = '0';
+
+		}
+		
+	}
+<!-- llamo a la función bgadj() por primera vez al terminar de cargar la página -->
+	bgadj();
+	<!-- vuelvo a llamar a la función  bgadj() al redimensionar la ventana -->
+	window.onresize = function() { 
+		bgadj();
+
+	}
+
+}
+
+
+
+function toggleFullScreen() {
+    if ((document.fullScreenElement && document.fullScreenElement !== null) ||    
+       (!document.mozFullScreen && !document.webkitIsFullScreen)) {
+    if (document.documentElement.requestFullScreen) {  
+      document.documentElement.requestFullScreen();  
+    } else if (document.documentElement.mozRequestFullScreen) {  
+	
+      document.documentElement.mozRequestFullScreen();  
+	  
+    } else if (document.documentElement.webkitRequestFullScreen) {  
+	
+      document.documentElement.webkitRequestFullScreen(Element.ALLOW_KEYBOARD_INPUT);  
+    }  
+  } else {  
+    if (document.cancelFullScreen) {  
+      document.cancelFullScreen();  
+    } else if (document.mozCancelFullScreen) {  
+      document.mozCancelFullScreen();  
+    } else if (document.webkitCancelFullScreen) {  
+      document.webkitCancelFullScreen();  
+    }  
+  }  
+} 
+
+
+function requestFullScreen(el) {
+  // Supports most browsers and their versions.
+  var requestMethod = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullScreen;
+
+  if (requestMethod) { // Native full screen.
+    requestMethod.call(element);
+  } else if (typeof window.ActiveXObject !== "undefined") { // Older IE.
+    var wscript = new ActiveXObject("WScript.Shell");
+    if (wscript !== null) {
+      wscript.SendKeys("{F11}");
+    }
+  }
+}
+
+var elem = document.body; // Make the body go full screen.
+requestFullScreen(elem);
+
+
+	
+
+</script>  
+    
+    <img src="../../root/img/bcg.jpg"  alt="snow" name="bg" width="10" height="10" id="bg" />
+     
+     
+      
+        <!-- Pushy Menu -->
+        <nav class="pushy pushy-left">
+            <ul>
+                <li><a href="#">Unidad 1</a></li>
+                <li><a href="#">Unidad 2</a></li>
+                <li><a href="#">Unidad 3</a></li>
+                <li><a href="#">Unidad 4</a></li>
+                <li><a href="#">Unidad 5</a></li>
+                <li><a href="#">Unidad 6</a></li>
+            </ul>
+        </nav>
+
+        <!-- Site Overlay -->
+    <div class="site-overlay">
+       
+        </div>
+
+        <!-- Your Content -->
+        <div id="container">
+        
+        <div class="menu-btn">
+        
+        
+        </div>
+       <p class="h21" >Patí y Calé MAT - 4to Primaria</p>
+       <img onClick="toggleFullScreen()" class="img1" src="../../root/mp/img/full.png"/ alt="Full">
+      
+        
+         
+            <!-- Menu Button -->
+             <div id="apDiv2">
+      
+      
+     <iframe name="principal"  src="../../root/unidad1.html" scrolling="no"  ></iframe>
+      
+      </div>
+
+           
+        </div>
+ 
+        <!-- Pushy JS -->
+        <script src="js/pushy.min.js"></script>
+
+    </body>
+</html>

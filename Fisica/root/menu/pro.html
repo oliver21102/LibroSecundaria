@@ -1,0 +1,17 @@
+<script type="text/javascript">
+    function show(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function hide(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>
+
+  <div onmouseover='show("tip")' onmouseout='hide("tip")'>
+    PASAR EL RATÓN POR ENCIMA
+  </div>
+  <div id="tip" style="display:none">
+    Texto adicional que sólo se muestra
+    cuando el cursor del ratón está colocado sobre la línea de arriba...
+  </div>

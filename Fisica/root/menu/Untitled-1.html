@@ -1,0 +1,77 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Documento sin título</title>
+
+
+
+<style type="text/css">
+#apDiv1 {
+	position: absolute;
+	left: 10px;
+	top: 61px;
+	width: 64px;
+	height: 61px;
+	z-index: 1;
+}
+#apDiv2 {
+	position: absolute;
+	left: 7px;
+	top: 16px;
+	width: 193px;
+	height: 31px;
+	z-index: 2;
+}
+</style>
+</head>
+
+<body>
+
+<div id="apDiv2">
+<div id="tip" style="display:none">
+    <img src="menu/menu.png"/>
+
+    
+  </div>
+</div>
+
+
+<div id="apDiv1">
+
+<div id="contenido" onmouseover='show("tip")' onmouseout='hide("tip")'>
+    
+    <img src="images/tarea.png" width="53" height="54"/>
+
+</div>
+  
+</div>
+
+
+
+
+ 
+
+
+
+
+
+
+<script type="text/javascript">
+    function show(id) {
+      document.getElementById(id).style.display = 'block';
+    }
+
+    function hide(id) {
+      document.getElementById(id).style.display = 'none';
+    }
+  </script>  
+
+
+
+
+
+ 
+</body>
+</html>

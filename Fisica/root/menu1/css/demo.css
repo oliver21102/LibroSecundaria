@@ -1,0 +1,42 @@
+html, body{
+	
+	-webkit-tap-highlight-color: rgba(0,0,0,0); /* disable webkit tap highlight */
+	height: 100%; /* fixes focus scrolling in Safari (OS X) */
+
+overflow:hidden;
+}
+
+/* Lists */
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+
+#container{
+	background-image:url(../../../root/img/nar.png);
+	background-repeat: no-repeat;
+	
+	position: relative;
+	padding: 0px 0px;
+	height:95.5%;
+	
+}
+
+/* Menu Button */
+
+.menu-btn{
+	width: 100px;
+	padding:17px;
+	margin-bottom: 0px;
+	
+	color: #FFF;
+	text-align: center;
+	cursor: pointer;
+}
+
+.menu-btn:hover{
+	
+}
